@@ -36,16 +36,12 @@ let BigliettoGiovani = EuroPerTratta - ScontoMinorenni
 
 let BigliettoAnziani = EuroPerTratta - ScontoAnziani
 
-
-if (18 < ClientAge < 65) {
-    console.log("Il tuo biglietto avrà un costo di " + EuroPerTratta + "Є");
-}
-
 if (ClientAge < 18) {
     console.log("Il tuo biglietto avrà un costo di " + BigliettoGiovani + "Є");
 }
-if (ClientAge > 65) {
+else if (ClientAge > 65) {
     console.log("Il tuo biglietto avrà un costo di " + BigliettoAnziani + "Є");
 }
-
-
+else {
+    console.log("Il tuo biglietto avrà un costo di " + EuroPerTratta + "Є");
+}
