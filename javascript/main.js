@@ -28,20 +28,24 @@ const EuroPerTratta = parseFloat(KmPercorsi * CostoAlKm);
 
 
 //creazione di un if con le fasce d'eta'
-let ScontoMinorenni = ((EuroPerTratta * 20) / 100)
+let ScontoMinorenni = ((EuroPerTratta * 20) / 100);
 
-let ScontoAnziani = ((EuroPerTratta * 40) / 100)
+let ScontoAnziani = ((EuroPerTratta * 40) / 100);
+
+let BigliettoGiovani = EuroPerTratta - ScontoMinorenni
+
+let BigliettoAnziani = EuroPerTratta - ScontoAnziani
 
 
+if (18 < ClientAge < 65) {
+    console.log("Il tuo biglietto avrà un costo di " + EuroPerTratta + "Є");
+}
 
 if (ClientAge < 18) {
-    console.log(EuroPerTratta - ScontoMinorenni);
+    console.log("Il tuo biglietto avrà un costo di " + BigliettoGiovani + "Є");
 }
 if (ClientAge > 65) {
-    console.log(EuroPerTratta - ScontoAnziani);
+    console.log("Il tuo biglietto avrà un costo di " + BigliettoAnziani + "Є");
 }
-else {
-    console.log("il costo del tuo biglietto sarà di Є" + EuroPerTratta);
-    console.log(typeof EuroPerTratta);
-}
+
 
